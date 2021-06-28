@@ -18,8 +18,8 @@
 #### this link will help you to do this task [turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
 
 #### <h2>step 1: install a ubountu and ROS </h2>
-
-#### <h2>step 2: install all dependencies we need : </h2>
+#### first install ubountu and then ROS 
+#### <h2>step 2: install all dependencies we need  </h2>
 
 <p><code>$ sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy \
   ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc \
@@ -32,9 +32,9 @@
   ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers
 </code></p>
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.here photoo
+![task2installdependency](https://user-images.githubusercontent.com/56357074/123694935-a0bbf800-d862-11eb-81af-5ac8cce810ea.png)
 
-#### <h2>step 3: install turtlebot3 packages : </h2>
+#### <h2>step 3: install turtlebot3 packages  </h2>
 
 
 <p><code>$ sudo apt-get install ros-melodic-dynamixel-sdk</code></p>
@@ -44,11 +44,11 @@
 <p><code>$ sudo apt-get install ros-melodic-turtlebot3</code></p>
 
 
-<h2>step 4: set a default TurtleBot3 Model Name:</h2>
+<h2>step 4: set a default TurtleBot3 Model Name</h2>
 
 <p><code>$ echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc</code></p>
 
-<h2>step 5:  install a turtlebot3 simulation package:</h2>
+<h2>step 5:  install a turtlebot3 simulation package</h2>
 
 <p><code>cd ~/catkin_ws/src/
 </code></p>
@@ -71,17 +71,18 @@
 <p><code>$ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 </code></p>
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>here photo
+![task2turtlrbot3world](https://user-images.githubusercontent.com/56357074/123694909-9a2d8080-d862-11eb-9d3f-8ab828f12ba7.png)
+
 
 - to make a turtlebot 3 mode operate with keyboard , use this command : 
 
 <p><code>$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 </code></p>
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> video of gazebo
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+https://user-images.githubusercontent.com/56357074/123695021-b9c4a900-d862-11eb-9347-e6471bece710.mp4
 
-#### <h2>step 7: run SLAM node :</h2>
+
+#### <h2>step 7: run SLAM node </h2>
 
 
 <p><code>$ export TURTLEBOT3_MODEL=waffle
@@ -90,6 +91,7 @@
 <p><code>$ roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
 </code></p>
 
+![task2RunSLAMwithoutUsingKeyboard](https://user-images.githubusercontent.com/56357074/123694959-a6194280-d862-11eb-88e7-22c90aa28c32.png)
 
 - to run a teleoperation :
 
@@ -97,8 +99,38 @@
 
 <p><code>$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch</code></p>
 
-#### <h2>step 8: save map : </h2>
+https://user-images.githubusercontent.com/56357074/123694994-b29d9b00-d862-11eb-911a-03c2c9e75145.mp4
+
+
+#### <h2>step 8: save map  </h2>
 
 <p><code>$ rosrun map_server map_saver -f ~/map</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
