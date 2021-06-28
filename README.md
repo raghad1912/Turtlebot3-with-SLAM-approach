@@ -17,9 +17,9 @@
 
 #### this link will help you to do this task [turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
 
-#### step 1: install a ubountu and ROS . 
+#### <h2>step 1: install a ubountu and ROS </h2>
 
-#### step 2: install all dependencies we need : 
+#### <h2>step 2: install all dependencies we need : </h2>
 
 <p><code>$ sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy \
   ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc \
@@ -32,22 +32,23 @@
   ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers
 </code></p>
 
-#### step 3: install turtlebot3 packages : 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.here photoo
+
+#### <h2>step 3: install turtlebot3 packages : </h2>
 
 
 <p><code>$ sudo apt-get install ros-melodic-dynamixel-sdk</code></p>
 
-
 <p><code>$ sudo apt-get install ros-melodic-turtlebot3-msgs</code></p>
-
 
 <p><code>$ sudo apt-get install ros-melodic-turtlebot3</code></p>
 
-step 4: set a default TurtleBot3 Model Name:
+
+<h2>step 4: set a default TurtleBot3 Model Name:</h2>
 
 <p><code>$ echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc</code></p>
 
-step 5:  install a turtlebot3 simulation package:
+<h2>step 5:  install a turtlebot3 simulation package:</h2>
 
 <p><code>cd ~/catkin_ws/src/
 </code></p>
@@ -59,7 +60,7 @@ step 5:  install a turtlebot3 simulation package:
 <p><code>$ cd ~/catkin_ws && catkin_make</code></p>
 
 
-#### step 6: launch simulation world 
+#### <h2>step 6: launch simulation world </h2>
 - by choosing one of simulation enviroment, but if you want create map with SLAM so choose either 
      TurtleBot3 World or TurtleBot3 House. 
     
@@ -70,12 +71,18 @@ step 5:  install a turtlebot3 simulation package:
 <p><code>$ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 </code></p>
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>here photo
+
 - to make a turtlebot 3 mode operate with keyboard , use this command : 
 
 <p><code>$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 </code></p>
 
-#### step 7: run SLAM node :
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> video of gazebo
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#### <h2>step 7: run SLAM node :</h2>
+
 
 <p><code>$ export TURTLEBOT3_MODEL=waffle
 </code></p>
@@ -90,7 +97,7 @@ step 5:  install a turtlebot3 simulation package:
 
 <p><code>$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch</code></p>
 
-#### step 8: save map : 
+#### <h2>step 8: save map : </h2>
 
 <p><code>$ rosrun map_server map_saver -f ~/map</code></p>
 
