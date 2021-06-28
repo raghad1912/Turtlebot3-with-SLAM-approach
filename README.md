@@ -15,11 +15,11 @@
  * save map
 
 
-this link will help you to do this task 
+#### this link will help you to do this task [turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
 
-#### first of all you have to install a ubountu and ROS . 
+#### step 1: install a ubountu and ROS . 
 
-#### then install all dependencies we need : 
+#### step 2: install all dependencies we need : 
 
 <p><code>$ sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy \
   ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc \
@@ -31,5 +31,67 @@ this link will help you to do this task
   ros-melodic-compressed-image-transport ros-melodic-rqt* \
   ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers
 </code></p>
+
+#### step 3: install turtlebot3 packages : 
+
+
+<p><code>$ sudo apt-get install ros-melodic-dynamixel-sdk</code></p>
+
+
+<p><code>$ sudo apt-get install ros-melodic-turtlebot3-msgs</code></p>
+
+
+<p><code>$ sudo apt-get install ros-melodic-turtlebot3</code></p>
+
+step 4: set a default TurtleBot3 Model Name:
+
+<p><code>$ echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc</code></p>
+
+step 5:  install a turtlebot3 simulation package:
+
+<p><code>cd ~/catkin_ws/src/
+</code></p>
+
+<p><code>$ git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+</code></p>
+
+
+<p><code>$ cd ~/catkin_ws && catkin_make</code></p>
+
+
+#### step 6: launch simulation world 
+- by choosing one of simulation enviroment, but if you want create map with SLAM so choose either 
+     TurtleBot3 World or TurtleBot3 House. 
+    
+- i will choose TurtleBot3 World :
+
+<p><code>$ export TURTLEBOT3_MODEL=waffle
+</code></p>
+<p><code>$ roslaunch turtlebot3_gazebo turtlebot3_world.launch
+</code></p>
+
+- to make a turtlebot 3 mode operate with keyboard , use this command : 
+
+<p><code>$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+</code></p>
+
+#### step 7: run SLAM node :
+
+<p><code>$ export TURTLEBOT3_MODEL=waffle
+</code></p>
+
+<p><code>$ roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+</code></p>
+
+
+- to run a teleoperation :
+
+<p><code>$ export TURTLEBOT3_MODEL=burger</code></p>
+
+<p><code>$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch</code></p>
+
+#### step 8: save map : 
+
+<p><code>$ rosrun map_server map_saver -f ~/map</code></p>
 
 
